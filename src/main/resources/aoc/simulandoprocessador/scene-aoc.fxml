@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aoc.simulandoprocessador.Controller">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="50.0">
+        <tabs>
+          <Tab fx:id="interrupcao_simples" closable="false" text="Interrupção Simples">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2596BE;">
+                     <children>
+                        <TextField fx:id="interrupcao_simples_seg1" alignment="BOTTOM_CENTER" layoutX="174.0" layoutY="1.0" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #2596BE; -fx-text-fill: #ffffff;" />
+                        <ProgressBar fx:id="interrupcao_simples_pb1" layoutX="-3.0" layoutY="108.0" prefHeight="99.0" prefWidth="256.0" progress="0.0" rotate="270.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="108.0">
+                           <effect>
+                              <ColorAdjust hue="0.19" />
+                           </effect></ProgressBar>
+                        <ProgressBar fx:id="interrupcao_simples_pb2" layoutX="181.0" layoutY="108.0" prefHeight="99.0" prefWidth="256.0" progress="0.0" rotate="270.0" visible="false" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="80.0">
+                           <effect>
+                              <ColorAdjust hue="-0.45" />
+                           </effect></ProgressBar>
+                        <ProgressIndicator fx:id="interrupcao_simples_pi1" layoutX="183.0" layoutY="291.0" prefHeight="70.0" prefWidth="88.0" progress="0.0">
+                           <effect>
+                              <ColorAdjust hue="0.19" />
+                           </effect></ProgressIndicator>
+                        <ProgressIndicator fx:id="interrupcao_simples_pi2" layoutX="367.0" layoutY="291.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="70.0" prefWidth="88.0" progress="0.0" visible="false">
+                           <effect>
+                              <ColorAdjust hue="-0.45" />
+                           </effect></ProgressIndicator>
+                        <TextArea fx:id="interrupcao_simples_relatorio" layoutX="329.0" layoutY="32.0" prefHeight="254.0" prefWidth="176.0" visible="false" AnchorPane.topAnchor="32.0" />
+                        <TextField fx:id="interrupcao_simples_processo1" alignment="CENTER" layoutX="68.0" layoutY="147.0" rotate="-90.0" style="-fx-background-color: #2596BE;" AnchorPane.leftAnchor="68.0" />
+                        <TextField fx:id="interrupcao_simples_processo2" alignment="CENTER" layoutX="255.0" layoutY="145.0" rotate="-90.0" style="-fx-background-color: #2596BE;" AnchorPane.leftAnchor="255.0" />
+                        <TextField fx:id="interrupcao_simples_seg2" alignment="BOTTOM_CENTER" layoutX="360.0" layoutY="2.0" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #2596BE; -fx-text-fill: #ffffff;" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="interrupcao_multipla" closable="false" text="Interrupções Multiplas">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2596BE;">
+                     <children>
+                        <ProgressBar fx:id="interrupcao_multipla_pb1" layoutX="-3.0" layoutY="108.0" prefHeight="99.0" prefWidth="256.0" progress="0.0" rotate="270.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="344.0">
+                           <effect>
+                              <ColorAdjust hue="0.19" />
+                           </effect>
+                        </ProgressBar>
+                        <ProgressBar fx:id="interrupcao_multipla_pb2" cache="true" layoutX="170.0" layoutY="108.0" prefHeight="99.0" prefWidth="256.0" progress="0.0" rotate="270.0" visible="false" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0">
+                           <effect>
+                              <ColorAdjust hue="-0.45" saturation="0.02" />
+                           </effect>
+                        </ProgressBar>
+                        <ProgressIndicator fx:id="interrupcao_multipla_pi1" layoutX="103.0" layoutY="291.0" prefHeight="70.0" prefWidth="88.0" progress="0.0" AnchorPane.bottomAnchor="12.0">
+                           <effect>
+                              <ColorAdjust hue="0.19" />
+                           </effect>
+                        </ProgressIndicator>
+                        <ProgressIndicator fx:id="interrupcao_multipla_pi2" layoutX="275.0" layoutY="291.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="70.0" prefWidth="88.0" progress="0.0" visible="false" AnchorPane.bottomAnchor="12.0">
+                           <effect>
+                              <ColorAdjust hue="-0.45" />
+                           </effect>
+                        </ProgressIndicator>
+                        <ProgressBar fx:id="interrupcao_multipla_pb3" layoutX="346.0" layoutY="108.0" prefHeight="99.0" prefWidth="256.0" progress="0.0" rotate="270.0" visible="false" AnchorPane.leftAnchor="344.0" AnchorPane.rightAnchor="0.0">
+                           <effect>
+                              <ColorAdjust hue="0.9" />
+                           </effect>
+                        </ProgressBar>
+                        <ProgressIndicator fx:id="interrupcao_multipla_pi3" layoutX="447.0" layoutY="291.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="70.0" prefWidth="88.0" progress="0.0" visible="false" AnchorPane.bottomAnchor="12.0">
+                           <effect>
+                              <ColorAdjust hue="0.9" />
+                           </effect>
+                        </ProgressIndicator>
+                        <TextArea fx:id="interrupcao_multipla_relatorio" layoutX="300.0" layoutY="31.0" prefHeight="254.0" prefWidth="176.0" visible="false" AnchorPane.rightAnchor="124.0" />
+                        <TextField fx:id="interrupcao_multipla_processo1" alignment="BOTTOM_CENTER" layoutX="-12.0" layoutY="144.0" rotate="-90.0" style="-fx-background-color: #2596BE;" AnchorPane.leftAnchor="-12.0" AnchorPane.rightAnchor="463.0" AnchorPane.topAnchor="144.0" />
+                        <TextField fx:id="interrupcao_multipla_processo2" alignment="BOTTOM_CENTER" layoutX="158.0" layoutY="145.0" rotate="-90.0" style="-fx-background-color: #2596BE;" AnchorPane.leftAnchor="158.0" AnchorPane.topAnchor="145.0" />
+                        <TextField fx:id="interrupcao_multipla_processo3" alignment="BOTTOM_CENTER" layoutX="332.0" layoutY="144.0" rotate="-90.0" style="-fx-background-color: #2596BE;" AnchorPane.leftAnchor="332.0" />
+                        <TextField fx:id="interrupcao_multipla_seg1" alignment="BOTTOM_CENTER" layoutX="96.0" layoutY="2.0" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #2596BE; -fx-text-fill: #ffffff;" />
+                        <TextField fx:id="interrupcao_multipla_seg2" alignment="BOTTOM_CENTER" layoutX="268.0" layoutY="2.0" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #2596BE; -fx-text-fill: #ffffff;" />
+                        <TextField fx:id="interrupcao_multipla_seg3" alignment="BOTTOM_CENTER" layoutX="440.0" layoutY="2.0" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #2596BE; -fx-text-fill: #ffffff;" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="500.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <image>
+            <Image url="@imagens/logo_intel.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="280.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Processador Intel Pentium 4">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
